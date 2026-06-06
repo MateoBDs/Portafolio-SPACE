@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SPACE Portfolio</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1b0033, #000);
+    color: white;
+    overflow-x: hidden;
+  }
+
+  /* FONDO ESPACIAL */
+  .stars, .stars2, .stars3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .stars {
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.25;
+  }
+
+  .stars2 {
+    background-image: radial-gradient(#b84dff 1px, transparent 1px);
+    background-size: 100px 100px;
+    opacity: 0.15;
+    animation: move 80s linear infinite;
+  }
+
+  .stars3 {
+    background-image: radial-gradient(#6a00ff 1px, transparent 1px);
+    background-size: 140px 140px;
+    opacity: 0.1;
+    animation: move 140s linear infinite reverse;
+  }
+
+  @keyframes move {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1200px); }
+  }
+
+  header {
+    text-align: center;
+    padding: 120px 20px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 72px;
+    letter-spacing: 4px;
+    color: #c77dff;
+    text-shadow: 0 0 25px #7a00ff;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #bbb;
+    font-size: 18px;
+  }
+
+  .section {
+    position: relative;
+    z-index: 2;
+    padding: 80px 10%;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #d9a7ff;
+    border-left: 4px solid #a64dff;
+    padding-left: 15px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    background: rgba(80, 0, 120, 0.25);
+    border: 1px solid rgba(200, 120, 255, 0.3);
+    border-radius: 18px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px #a64dff;
+  }
+
+  .tag {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: #6a00ff;
+    font-size: 12px;
+  }
+
+  .big {
+    font-size: 18px;
+    color: #ddd;
+  }
+
+  footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+    position: relative;
+    z-index: 2;
+  }
+
+  .contact {
+    font-size: 20px;
+    color: #c77dff;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div class="stars2"></div>
+<div class="stars3"></div>
+
+<header>
+  <h1>SPACE</h1>
+  <p class="subtitle">Mini Dev de servidores de Discord • Bots • Sistemas</p>
+</header>
+
+<!-- SOBRE MI -->
+<div class="section">
+  <div class="section-title">Sobre mí</div>
+  <div class="grid">
+    <div class="card">
+      <p class="big">
+        Soy un mini desarrollador especializado en Discord, creando sistemas de automatización,
+        gestión de servidores y herramientas avanzadas.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">Herramientas</div>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Discord Dev</h3>
+      <p>Desarrollo de bots y sistemas para servidores.</p>
+      <span class="tag">Bots</span>
+      <span class="tag">Automatización</span>
+    </div>
+
+    <div class="card">
+      <h3>Sistemas</h3>
+      <p>Control y gestión avanzada de servidores.</p>
+      <span class="tag">Tickets King</span>
+      <span class="tag">Guild Manager</span>
+    </div>
+
+    <div class="card">
+      <h3>Optimización</h3>
+      <p>Sistemas rápidos, limpios y escalables.</p>
+      <span class="tag">Logs</span>
+      <span class="tag">Moderación</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROYECTOS -->
+<div class="section">
+  <div class="section-title">Proyectos</div>
+  <div class="grid">
+
+    <div class="card">
+      <h3>BD Developers Discord</h3>
+      <p>Servidor de desarrollo y automatización de comunidades.</p>
+    </div>
+
+    <div class="card">
+      <h3>Custom Discord Systems</h3>
+      <p>Sistemas personalizados para servidores privados.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="section">
+  <div class="section-title">Contacto</div>
+  <div class="grid">
+    <div class="card">
+      <p class="contact">zzdaniellzzz (Discord)</p>
+      <p>Disponible para proyectos y colaboraciones.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  SPACE • Portfolio de desarrollador Discord
+</footer>
+
+</body>
+</html>
